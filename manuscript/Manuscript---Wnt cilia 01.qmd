@@ -1,0 +1,124 @@
+---
+title: "Wnt/LRP6 signaling activation impairs ciliogenesis via suppression of OFD1 degradation via mTOR-dependent autophagy"
+subtitle: |
+  \raggedright  Cheng Yuan 1^1,2^ ,Bahtiyar Kurtulmus 2^1,2^, Sergio Acebron 3^3^, Gislene Pereira 4^4,\*^ \newline<br>^1^Heidelberg University, Centre for Organismal Studies (COS), 69120 Heidelberg, Germany \newline<br>^2^Affiliation 2 \newline<br>^3^Affiliation 3 \newline<br>^4^Affiliation 4\newline<br>  ^\*^Correspondence: xy@cos.uni-heidelberg.de
+mainfont: Arial
+monofont: Courier New #Times New Roman
+fontsize: 11pt
+linestretch: 1.2
+linkcolor: blue
+documentclass: article
+crossref:
+  fig-title: Figure     # (default is "Figure")
+max-width: 100%
+format:
+  html: 
+    embed-resources: true
+  pdf:
+    pdf-engine: xelatex
+    number-sections: false
+    margin-left: 0.8in
+    margin-right: 0.8in
+    margin-top: 0.8in
+    margin-bottom: 0.8in
+    toc: true
+    keep-tex: true
+    header-includes:
+      - \usepackage{sectsty}
+      - \sectionfont{\fontsize{14}{15}\selectfont} % Font size for sections
+      - \subsectionfont{\fontsize{12}{14}\selectfont} % Font size for subsections
+      - \subsubsectionfont{\fontsize{10}{12}\selectfont} % Font size for subsubsections
+    include-before-body:
+      text: |
+        \linenumbers
+bibliography: references.bib #add bibliography in this file
+csl: elife.csl #change according to journal
+---
+
+```{r include=FALSE}
+source("../analysis/scripts/statistics_for_paper.R")
+
+```
+# Abstract
+
+[This]{.underline} is an R **Markdown** *document.* ^Markdown^ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+**text in bold** *italic* [underline]{.underline}
+
+# Introduction
+
+You can add references either by referring to their id in the .bib file e.g., [@Marinkovi2020], or by switching to the visual editor (Cogwheel in the .Rmd menu -\> Use Visual Editor). [@Jokura_2023][@Jokura_2023][@Jacobs2023]
+
+It is now a test to edit the text and see how the changes show up on GitHub.
+
+Test of git show.
+
+In the visual editor mode, go to 'Insert' -\> \@ Citation
+
+You can select a Zotero library, PubMed, CrossRef etc. and insert the citations. [@Jacobs2023]
+
+The easiest way is to use the command line:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+curl -LH "Accept: application/x-bibtex" https://doi.org/10.7554/eLife.91258.1 >> references.bib
+```
+
+*Platynereis dumerilii* is a marine annelid... [@ozpolat2021]
+
+The references are stored in manuscript/references.bib (need to be defined in the Yaml header). This file will automatically updated when you insert a new reference through the Visual editor \> Insert \> Citations.
+
+In this documents, references will be formatted in the style of eLife. This is defined in the Yaml header under: csl: elife.csl. The elife.csl file is saved in the /manuscript folder.
+
+If you would like to use a different citation format, download the respective .csl file (e.g., from the Zotero style repository <https://www.zotero.org/styles>), save it in the /manuscript folder of the project and change the Yaml to csl: your_favourite_journal.csl.
+
+# Results
+
+### Wnt/LRP6 signaling stimulation decreases cilia formation
+
+
+To investigate the influence of WNT activation upon cilia formation, we used human retinal pigment epithelial (RPE1) cells, which undergo ciliation in a time-dependent manner upon serum starvation. To confirm the responsiveness of our RPE1 cell line to the WNT ligand Wnt3a and establish the timing of Wnt3a treatment, we constructed stable cells carrying the established WNT reporter 7xTGC-GFP (REF). The addition of Wnt3a-conditioned media (Wnt3a-CM), but not control-CM (Co-CM), led to a timely increase in the number of cells with high GFP signals, clearly visible after 6 hours of Wnt3a-CM addition (Fig. S1A). Furthermore, we observed increased β-catenin protein levels as a consequence of β-catenin stabilization (Fig. S1B). Based on these analyses, RPE1 cells were treated twice (6 hours prior to serum starvation and at the time of serum starvation) with Co-CM or Wnt3a-CM to maintain WNT activation (Fig. 1A). In comparison to control, Wnt3a-CM treatment significant reducted ciliation in RPE1 cells even after prolonged incubation (Fig.1B, S1C). Importantly, the analysis of DNA-content by FACS and phosphorylated Rb protein (a marker for proliferating cells, REF) indicated that this negative effect on ciliogenesis was not due to inability of cells to arrest at the G1/G0 phase of the cell cycle upon serum starvation (Fig. 1C, S1D). The negative effect of Wnt activation on ciliogenesis was not restricted to RPE1 cells, as a similar effect was observed in mouse fibroblasts (NIH3T3, Fig. S1E, S1F) and murine inner medullar kidney tubular (IMCD3) cells (Fig. S1E, S1F). Together, these data show that activation of Wnt signaling decreases the ability of human RPE1, mouse NIH3T3 and IMCD3 cells to ciliate.
+	WNT ligands, such as Wnt3a and Wnt1, signal via heterodimerisation of the WNT receptor frizzled (FZD) and co-receptors LRP5/LRP6. This activation step is counteracted by the Dickkopf-related protein 1 (DKK1), which inhibits the association of WNT ligand to LRP receptors. To address whether the effect of WNT on ciliogenesis requires FZD-LRP5/6, we first made use of a recombinant surrogate WNT agonist, which induces heterodimerisation of FZD and LRP5 or LRP6 and hence WNT activation (Fig S1G). Similar to Wnt3a-CM, recombinant Wnt surrogate significantly diminished the percentage of ciliated cells in RPE1 cells (Fig. 1D). Furthermore, DKK1 counteracted the negative effect of Wnt1 ligand on ciliogenesis, as the co-expression of Wnt1 and DKK1 was able to rescue ciliogenesis in Wnt1 expressing cells (Fig. 1E). This data together indicate the involvement of the WNT-LRP pathway in ciliogenesis.
+
+Wnt/LRP-activation inhibits cilia formation independently of TCF7 
+Activation of Wnt/LRP6 pathway leads to stabilisation of cytoplasmic β-catenin that subsequently enters the nucleus, where it activates gene expression via binding to Lymphoid enhancer-binding factor (Lef)/T-cell factor (TCF) transcription factors. To test whether Wnt activation influences ciliogenesis via TCF/LEF dependent transcriptional regulation, we investigated whether ciliogenesis required TCF7 (Fig. 2A-C). In the large majority of RPE1 cells (>99 %), TCF7 entered the nucleus upon Wnt3a addition (Fig. 2A). Furthermore, the levels of TCF7 and β-catenin protein increased upon Wnt3a-CM but not Co-CM addition in mock-depleted cells (Fig. 2A and 2B, siLUC), confirming responsiveness to Wnt activation in RPE1 cells. We next depleted TCF7 using small interference RNAs (siRNAs) before exposing the cells to Co- or Wnt3a-CM. Additional markers for WNT activation included DVL2 hyperphosphorylation, which is induced via an LRP5/6 independent mechanism independently of β-catenin dependent transcription (10.1128/MCB.24.11.4757-4768.2004). DVL2 became hyper-phosphorylated upon addition of Wnt3a-CM in mock-siRNA or TCF7-siRNA treated cells, confirming Wnt activation in both conditions. Interestingly, β-catenin protein levels decreased in TCF7-siRNA treated cells indicating activates β-catenin protein in a TCF7-dependent manner (Fig. 2B) (REFS). However, the analysis of ciliogenesis indicated that Wnt3a-CM led to cilia loss independently of the presence of TCF7 (Fig. 2C). In conclusion, these data indicate that the negative effect of Wnt activation upon cilia formation does not require TCF7.
+
+Wnt-LRP activation decreases the recruitment of Rab8a to basal bodies
+GSK3β was shown to promote ciliary membrane extension in a Rab8a-dependent manner (REF Zhang). Indeed, the inhibition of GSK3 in RPE1 cells with either BIO or CHIR99021 significantly suppressed cilia formation (Fig. X) and the accumulation of Rab8a around centrosomes (Fig. X). Interestingly, few cells were still able to form cilia upon GSK3 inhibition. In these cells, cilia were significantly longer in comparison to WT cells, confirming GSK3’s influence on cilia biogenesis (REF for longer cilia).
+
+As GSK3β decreases upon WNT activation, we asked whether Rab8a-vesicular trafficking to the centrosome was also impaired in Wnt3a-treated cells. To investigate this, we used an established RPE1 cell line stably expressing GFP-Rab8a (Ref Kerstin). Whereas GFP-Rab8a accumulated around centrosomes shortly after serum starvation in control cells, the number of Rab8a-positive centrosomes significantly reduced in Wnt3a-CM treated samples (Fig. X). Since Rab8a is transported to the centrosome in a microtubule-dependent manner (Ref), we also analyzed the localization of the centriolar satellite protein PCM1, which accumulates around centrosomes via microtubule-based transport (REF), under the same conditions. The levels of centrosomal PCM1 did not differ between Co-CM and Wnt3a-CM treated cells (Fig. SX), implying that microtubule-dependent trafficking of proteins to the centrosome is not generally disturbed.
+
+Rab8a-vesicle docking at mother centrioles requires distal appendage proteins (REF Kerstin, Sillibourne, Tsou). To investigate whether Wnt activation negatively influenced appendage formation, we compared the levels of appendage proteins at the basal body in Co-CM and Wnt3a-CM treated cells. No significant decrease in protein levels was observed for CEP164, TTBK2, CEP83, CEP89/CEP123 or CHIBBY (distal appendage proteins, Fig. 2A, Fig. SX, X – MOVE all negative data to supplement). The levels of the subdistal component ODF2 also remained unchanged upon Wnt3a-CM treatment (Fig. X). Interestingly, the levels of CEP164 and CHIBBY were significantly decreased in GSK3-inhibited RPE1 cells compared to untreated cells (Fig. X), indicating a role of GSK3 kinase in appendage integrity.
+
+Data with DVL overexpression and signalosome formation as competitor of Rab8 here?
+
+Inhibition of mTOR signaling rescues cilia formation in Wnt activated cells
+Autophagy was shown to play an important role in ciliogenesis through degradation of cilia inhibitory proteins. As Wnt signaling was reported to activate mTOR, which in turn reduces autophagy (Nazio paper), we asked whether Wnt activation influences ciliogenesis through mTOR. If this were the case, we would expect higher mTOR activity in cells treated with Wnt3a-CM. The phosphorylation levels of the mTOR substrate, the ribosomal protein S6 kinase, S6K, markedly increased in Wnt3a-CM (Fig. X, lane 3) in comparison to control (Fig X, lane 1). This effect was due to mTOR activity, as S6K phosphorylation was inhibited by the mTOR inhibitor, rapamycin (Fig X., lanes 2 and 4). We thus concluded that mTOR activity is higher in Wnt activated samples.
+To test whether increased mTOR activity was related to loss of cilia upon Wnt activation, we exposed Co-CM and Wnt3a-CM treated samples to a short treatment with rapamycin (Fig. X). This treatment significantly increased ciliation in Wnt3a-CM but not in Co-CM treated cells (Fig. X), confirming the contribution of mTOR to cilia loss. Together, our data suggest that WNT activation inpairs cilia formation via the mTOR-autophagy pathway. 
+
+Wnt signaling activation impairs the removal of OFD1 from centriolar satellites
+One autophagy target involved in cilia formation is the ciliopathy-related protein OFD1. OFD1 is present at both, centrioles and centriolar satellites. Centriolar satellites are macromolecular protein complexes containing centrosome/cilia components that are distributed within the cytoplasm and enriched at the centrosome. At centrioles, OFD1 is essential for centriole biogenesis and ciliogenesis, whereas the satellite pool of OFD1 suppresses cilia formation and is degraded by the autophagic pathway. To investigate whether WNT activation influences OFD1 degradation, we quantified the levels of centriolar satellite OFD1 at the pericentrosomal area in the presence or absence of Wnt3a. We observed significantly higher levels of OFD1 at centriolar satellites in cells treated with Wnt3a in comparison to control samples (Figure XC and D), implying that OFD1 degradation is impaired upon Wnt activation. 
+
+We next reasoned that if the loss of cilia formation upon Wnt activation was due to the presence of OFD1, it ectopic degradation should rescue ciliogenesis. For this, we used siRNA-treatment to reduce the levels of OFD1 prior to cilia induction and Wnt3a-treatment. The depletion of ODF1 significantly increased the percentage of ciliated cells in Wnt3a-CM treated samples (Fig. XE). This suggest that Wnt-activation impairs ciliogenesis by impairing OFD1 centriole satellite degradation.
+
+
+You can add your figures into the rendered document. We saved the figures into /manuscript/figures or /manuscript/figure_supplements and can insert them from there. We use knitr::include_graphics for this. The title and legend can also be edited, as will as the width of the output figure. Test comment behaviour: <!--# Test comment for git show -->
+
+```{r}
+#| echo: false
+#| eval: false
+print("hi")
+```
+
+```{r, out.width = "100%", fig.cap="**Figure 1. A figure** (A) A nice picture. (B) legend.  (C) <br> (D) " }
+#| echo: false 
+
+knitr::include_graphics("figures/Figure1.png")
+```
+
+```{r, out.width = "100%", fig.cap="**Figure 1. Our nice figure from yesterday** (A) A nice picture. (B) legend.  (C) <br> (D) " }
+#| echo: false 
+
+knitr::include_graphics("figures/Figure_complex.png")
